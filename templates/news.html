@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>News</title>
+</head>
+<body>
+    <h1>Aggregated News</h1>
+    {% for article in articles %}
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+        <a href="{{ article.url }}">Read more...</a>
+    {% endfor %}
+</body>
+</html>
+
